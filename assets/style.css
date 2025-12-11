@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+@font-face {
+  font-family: 'PublicaSans-Medium'; /* Nama yang Anda inginkan untuk font ini */
+  src: url('../assets/PublicaSans-Medium.woff') format('woff'); /* Lokasi file font WOFF */
+  /* Opsional: Anda dapat menambahkan varian font seperti bold atau italic jika diperlukan */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+      margin-top: 100px;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FFF;
+      overflow-x: hidden;
+    }
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('../assets/images/Banner 4.jpg');
+        background-color: rgba(0, 0, 0, 0.7); /* Warna hitam dengan transparansi 50% */
+        background-blend-mode: darken; /* Untuk memberikan efek yang lebih gelap */
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        width: 100%;
+        height: 90vh;
+      }
+      
+
+    .banner-content h2 span {
+      font-size: 24px;
+      text-align: left;
+    }
+
+    .banner-content {
+      max-width: 50%; /* Membagi bagian kiri dan kanan */
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .banner-content h2 {
+      font-size: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .order-button {
+      font-family: 'Montserrat', sans-serif;
+      margin-left: 40px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #FFFFFF;
+      position: relative;
+      padding: 12px 24px;
+      border-radius: 100px;
+      margin-top: 35px;
+      transition: all 0.3s;
+      background: linear-gradient(to right, #5CBA47, #2CA148);
+      border: 2px solid white; /* Hapus border pada tombol utama */
+      overflow: hidden; /* Membuat efek gradien border */
+      width: 185px;
+      height: 20px;
+    }
+
+    .order-button::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      z-index: -1;
+      border: 2px solid transparent; /* Batas untuk efek gradien */
+      border-radius: 20px;
+      background: linear-gradient(to right, #549743, #368844);
+    }
+
+    .order-button img {
+      width: 28px;
+      filter: brightness(0) invert(1);
+      margin-right: 17px;
+    }
+
+    .order-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  h2 span:first-child {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+  }
+
+  h2 span:last-child {
+    font-size: 60px;
+    color: #F26421;
+  }
+
+  .text-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-container span:first-child {
+    display: inline; /* Mengubah display menjadi inline */
+    text-align: left;
+  }
+
+  .selamat-text {
+    font-family: 'PublicaSans-Medium', sans-serif;
+    position: absolute;
+    left: 40px; /* Atur jarak dari sisi kiri */
+    /* Atur posisi lainnya jika diperlukan, seperti top, bottom, right */
+  }
+  
+
+    .warung-text, .butitin-text {
+      margin-top: 45px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .warung-text {
+      margin-right: 10px;
+      margin-left: 100px;
+      font-family: 'Lemon', serif !important;
+  font-size: 60px !important;
+  color:#1B1817 !important; /* Mengubah warna teks "Warung" menjadi hitam */
+  -webkit-text-stroke:0.5px #FFF ;
+}
+
+.butitin-text {
+  margin-right: 130px;
+  font-family: 'Lemon', serif !important;
+  font-size: 32px;
+  color: #F26421;
+}
+
+.banner-content p {
+  color: #FFF;
+  font-family: 'PublicaSans-Medium', sans-serif;
+  text-align: left;
+  margin-left: 40px;
+  width: 500px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.banner-image img {
+  height: 500px;
+  animation: rotate 7s linear infinite; /* Menjalankan animasi dengan nama "rotate" */
+}
+
+.banner-image{
+  margin-top: 20px;
+  margin-left: -70px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); /* Putar mulai dari 0 derajat */
+  }
+  100% {
+    transform: rotate(360deg); /* Putar hingga 360 derajat */
+  }
+}
+    /* CSS untuk layar kecil (Kurang dari 768px) */
+    @media only screen and (max-width: 768px) {
+      .banner-content h2 span {
+        font-size: 20px; /* Mengurangi ukuran font untuk layar kecil */
+      }
+      .banner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .banner-content {
+        max-width: 100%; /* Mengisi seluruh lebar */
+      }
+
+      .order-button {
+        margin-top: 20px;
+      }
+    }
+
+    /* Kartu produk */
+   /* Your existing CSS styles */
+
+   .products {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+    padding: 20px; /* Menambahkan ruang di dalam section */
+    padding-top: 0px;
+    overflow: auto; /* Menambahkan kemampuan pengguliran */
+  }
+
+  .products h3{
+    margin-bottom: 0px;
+    font-family: 'PublicaSans-Medium', sans-serif;
+    font-size: 30px;
+    margin-left: 41%;
+    color: #1B1817;
+  }
+
+  .products .kami-highlight {
+    color: #F26421;
+  }
+  /* Gaya untuk teks "Makanan & Minuman" di dalam .products */
+  #makanan-minuman {
+    font-family: 'PublicaSans-Medium', sans-serif;
+    font-size: 16px; /* Ukuran teks */
+    color: #1B1817;
+    margin-left: 40.9%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  
+  .scrollable-container {
+    width: 94%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 20px; /* Atur jarak atas */
+    padding-bottom: 20px; /* Atur ruang di bawah agar tombol scroll jelas terlihat */
+  }
+  
+  .product-list {
+    display: inline-block;
+    width: auto; /* Menghilangkan lebar tetap, biarkan mengikuti konten */
+    margin: 0 10px; /* Sesuaikan margin agar card terlihat terpisah */
+    margin-bottom: 15px;
+  }
+  
+  .product-item {
+    border-radius: 15px;
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    border: 2px solid white;
+    margin: 0 10px; /* Sesuaikan margin agar card terlihat terpisah */
+    vertical-align: top; /* Menjaga penempatan yang benar */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product-item p {
+    font-family: 'PublicaSans-Light', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    margin: 0 10px; /* Atur margin untuk teks */
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  .product-item h4 {
+    font-family: 'PublicaSans-Medium', sans-serif;
+    text-align: left;
+    margin: 0 10px; /* Atur margin untuk teks */
+    margin-top: 9px;
+    margin-left: 20px;
+  }
+  .product-item img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 70px;
+  }
+  
+  /* Additional styles for the buttons */
+  .scroll-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    color: white;
+  }
+  .see-more {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #F26421, #F27521);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border-top: 2px solid #FDB58F;
+    border-right: 2px solid #FDB58F;
+    border-left: 2px solid #F79460; /* Tentukan jenis border yang diinginkan */
+    border-bottom: 2px solid #F79460; /* Tentukan jenis border yang diinginkan */
+    box-shadow: 0 15px 15px rgba(242, 100, 33, 0.4);
+    transition: box-shadow 0.3s, background 0.3s; /* Animasi efek */
+  }
+  
+  .see-more:hover {
+    background: linear-gradient(to right, #E1672F, #E1672F);
+    box-shadow: 0 6px 10px rgba(225, 103, 47, 0.4); /* Perubahan efek pada hover */
+  }
+
+  .see-more svg {
+    margin-left: 7px;
+  }
+  
+  .about-us {
+    background: linear-gradient(to right, #F26421, #F27521);
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    position: relative; /* Menetapkan posisi relatif */
+  }
+
+  .about-us::before {
+    content: "";
+    position: absolute;
+    top: 52%; /* Meletakkan di tengah vertikal */
+    left: 50%; /* Meletakkan di tengah horizontal */
+    width: 700px; /* Lebar bayangan */
+    height: 85%; /* Tinggi bayangan */
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8); /* Warna dan opacity bayangan */
+    z-index: -1; /* Meletakkan di belakang konten */
+    box-shadow: 0 0 45px 9px rgba(0, 0, 0, 0.9);
+    border-radius: 500px;
+  }
+
+  .about-us h3 {
+    font-family: 'PublicaSans-Medium', sans-serif;
+    font-size: 30px;
+    color: #1B1817;
+    margin-bottom: 0;
+  }
+
+  .right-section .warung-highlight {
+    color: #ffffff;
+  }
+
+  .about-us p {
+    color: #fff4ee;
+    font-family: 'PublicaSans-light', sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .about-us .left-section {
+    flex: 1;
+    text-align: center;
+    padding-left: 30px;
+  }
+
+  .about-us .right-section {
+    flex: 1;
+    text-align: left;
+    padding: 0 40px;
+  }
+
+  .about-us .left-section img {
+   border-radius: 20px;
+   border-top: 3px solid #FEE3D5;
+   border-right:2px solid #FEE3D5;
+   border-bottom: 3px solid #FED7C3;
+   border-left: 2px solid #FED7C3;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .about-us .right-section h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .about-us {
+      flex-direction: column;
+    }
+
+    .about-us .left-section,
+    .about-us .right-section {
+      padding: 20px 0;
+    }
+  }
+
+/* CSS untuk section */
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-left: 100px;
+  padding-right: 120px;
+  margin-bottom: 60px;
+}
+
+.form {
+  margin-left: 60px;
+}
+
+.form h4 {
+  font-family: 'PublicaSans-Medium', sans-serif;
+  font-size: 30px;
+  color: #1B1817;
+  margin-bottom: 5%;
+}
+
+.form .contac-h4 {
+  color: #F26421; /* Warna untuk teks span */
+}
+
+/* CSS untuk bagian kiri (form) */
+/* CSS untuk form */
+/* Dalam file CSS Anda */
+/* Gaya umum untuk input dan textarea */
+form.custom-form input,
+form.custom-form textarea {
+  display: block;
+  width: 400px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #e1e1e1; /* Warna garis bawah default */
+  transition: border-bottom 0.3s ease; /* Animasi perubahan warna garis bawah */
+}
+
+/* Gaya ketika input atau textarea mendapatkan fokus */
+form.custom-form input:focus,
+form.custom-form textarea:focus {
+  border-bottom: 2px solid #F26421; /* Warna garis bawah saat mendapatkan fokus */
+  outline: none; /* Hilangkan garis tanda fokus default di beberapa browser */
+}
+
+/* Gaya untuk tombol */
+form.custom-form button {
+  background: linear-gradient(to right, #F26421, #F27521);
+  color: #fff; /* Warna teks tombol */
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease; 
+  border-top: 2px solid #FDB58F;
+  border-right: 2px solid #FDB58F;
+  border-left: 2px solid #F79460; /* Tentukan jenis border yang diinginkan */
+  border-bottom: 2px solid #F79460; /* Tentukan jenis border yang diinginkan */
+}
+
+/* Gaya saat tombol dihover */
+form.custom-form button:hover {
+  background: linear-gradient(to right, #E1672F, #E1672F); /* Warna latar tombol saat dihover */
+}
+
+
+
+/* CSS untuk bagian kanan (social media) */
+/* CSS untuk bagian alamat */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  padding-left: 44px;
+  margin-left: 60px;
+  margin-right: 35px;
+  background: #ffffff;
+  height: 220px;
+  width: 480px;
+  margin-top: 60px;
+  padding-bottom: 90px;
+  padding-top: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: 3px solid #dcdcdc;
+  border-right: 3px solid #dcdcdc;
+  box-shadow: 1px 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+/* CSS untuk mengatur tata letak dan gaya ikon */
+.social-media a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+
+.social-media p {
+  margin-bottom: 0;
+  font-family: 'PublicaSans-light', sans-serif;
+}
+
+.social-media h4 {
+  margin-bottom: 0px;
+  font-family: 'PublicaSans-Medium', sans-serif;
+}
+
+/* CSS untuk ikon */
+.social-media svg {
+  width: 40px;
+  height: 40px;
+  fill: #e60a0a;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 4px;
+}
+
+/* CSS untuk animasi saat disentuh */
+.social-media a:hover svg {
+  transform: scale(1.2);
+}
+
+/* CSS untuk ikon Facebook dan Instagram */
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+  margin-left: 5px;
+}
+
+.social-icons a {
+  margin-right: 1px;
+}
+
+/* CSS untuk menanggapi sentuhan/mouse hover pada ikon Facebook dan Instagram */
+.social-icons a:hover svg {
+  transform: scale(1.2);
+}
+
+.social-icons .facebook-icon svg {
+  width: 40px; /* Ubah lebar sesuai kebutuhan */
+  height: 40px; /* Ubah tinggi sesuai kebutuhan */
+}
+
+/* CSS untuk ikon Instagram */
+.social-icons .instagram-icon svg {
+  width: 32px; /* Ukuran asli */
+  height: 32px; /* Ukuran asli */
+}
+
+.social-icons a:first-child {
+  margin-left: 0; /* Hapus margin kiri untuk ikon pertama */
+}
+
+.media {
+  font-family: 'PublicaSans-Medium', sans-serif;
+}
